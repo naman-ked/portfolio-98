@@ -19,8 +19,6 @@ import { ArViewDemo } from './components/ArViewDemo';
 import { Minesweeper } from './components/Minesweeper';
 import { TerminalPrompt } from './components/TerminalPrompt';
 import { StartMenu } from './components/StartMenu';
-import { SourceViewerModal } from './components/SourceViewerModal';
-import { downloadSourceZip } from './downloadZip';
 
 type WindowId = 'hero' | 'experience' | 'projects' | 'academics' | 'contact';
 type ModalApp = 'spinwheel' | 'portal' | 'arview' | 'minesweeper' | 'terminal' | 'shutdown' | 'directNote' | 'sourceViewer';
@@ -309,29 +307,6 @@ export default function App() {
               Internet Explorer
             </span>
           </a>
-
-          {/* Download Source Code (.zip) */}
-          <div
-            className="desktop-icon flex flex-col items-center text-center p-1.5 rounded cursor-pointer group text-white decoration-none w-20 shrink-0"
-            onClick={async () => {
-              playChord();
-              try {
-                await downloadSourceZip();
-              } catch (err) {
-                console.error(err);
-                setActiveModal('sourceViewer');
-              }
-            }}
-            onDoubleClick={() => setActiveModal('sourceViewer')}
-            title="Click to download guaranteed .ZIP or Double-click to browse files"
-          >
-            <div className="w-10 h-10 win-outset flex items-center justify-center bg-[#c0c0c0] shadow mb-1">
-              <span className="material-symbols-outlined text-2xl text-[#b22222]">folder_zip</span>
-            </div>
-            <span className="text-[11px] font-medium leading-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] bg-[#008080]/80 group-hover:bg-[#000080] px-1">
-              Source.zip
-            </span>
-          </div>
 
           {/* Recycle Bin */}
           <div
@@ -1661,7 +1636,6 @@ export default function App() {
       {activeModal === 'arview' && <ArViewDemo onClose={() => setActiveModal(null)} />}
       {activeModal === 'minesweeper' && <Minesweeper onClose={() => setActiveModal(null)} />}
       {activeModal === 'terminal' && <TerminalPrompt onClose={() => setActiveModal(null)} />}
-      {activeModal === 'sourceViewer' && <SourceViewerModal onClose={() => setActiveModal(null)} />}
 
       {/* Direct Note Quick Dispatch Modal */}
       {activeModal === 'directNote' && (
