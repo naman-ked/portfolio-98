@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --win-bg: #c0c0c0;
+  --win-highlight: #ffffff;
+  --win-light: #dfdfdf;
+  --win-shadow: #808080;
+  --win-dark-shadow: #000000;
+  --win-blue: #000080;
+  --win-blue-light: #1084d0;
+  --win-teal: #008080;
+}
+
+body {
+  background-color: var(--win-teal);
+  font-family: -apple-system, "Segoe UI", Tahoma, "MS Sans Serif", Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: text;
+  overflow-x: hidden;
+}
+
+/* 3D Bevel Raised Borders */
+.win-outset {
+  background-color: var(--win-bg);
+  border-top: 2px solid var(--win-highlight);
+  border-left: 2px solid var(--win-highlight);
+  border-right: 2px solid var(--win-dark-shadow);
+  border-bottom: 2px solid var(--win-dark-shadow);
+  box-shadow: 1px 1px 0px var(--win-shadow) inset;
+}
+
+.win-inset {
+  background-color: #ffffff;
+  border-top: 2px solid var(--win-shadow);
+  border-left: 2px solid var(--win-shadow);
+  border-right: 2px solid var(--win-highlight);
+  border-bottom: 2px solid var(--win-highlight);
+  box-shadow: 1px 1px 0px var(--win-dark-shadow) inset;
+}
+
+.win-inset-gray {
+  background-color: #d4d0c8;
+  border-top: 2px solid var(--win-shadow);
+  border-left: 2px solid var(--win-shadow);
+  border-right: 2px solid var(--win-highlight);
+  border-bottom: 2px solid var(--win-highlight);
+}
+
+/* Retro 3D Command Button */
+.win-btn {
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-highlight);
+  border-left: 2px solid var(--win-highlight);
+  border-right: 2px solid var(--win-dark-shadow);
+  border-bottom: 2px solid var(--win-dark-shadow);
+  box-shadow: 1px 1px 0px #808080;
+  color: #000000;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  outline: none;
+  transition: none;
+}
+
+.win-btn:active, .win-btn-pressed {
+  border-top: 2px solid var(--win-dark-shadow) !important;
+  border-left: 2px solid var(--win-dark-shadow) !important;
+  border-right: 2px solid var(--win-highlight) !important;
+  border-bottom: 2px solid var(--win-highlight) !important;
+  box-shadow: none !important;
+  padding-top: calc(0.25rem + 1px);
+  padding-left: calc(0.35rem + 1px);
+}
+
+/* Classic Title Bar */
+.win-titlebar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.win-titlebar-inactive {
+  background: linear-gradient(90deg, #808080 0%, #b5b5b5 100%);
+  color: #c0c0c0;
+}
+
+/* Tab Controls */
+.win-tab {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #c0c0c0;
+  margin-bottom: -2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.win-tab.active {
+  background-color: #c0c0c0;
+  border-bottom: 2px solid #c0c0c0;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* CRT Subtle Scanline Texture */
+.crt-overlay {
+  pointer-events: none;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%);
+  background-size: 100% 4px;
+  z-index: 999;
+}
+
+/* Taskbar active/sunken look */
+.taskbar-btn-active {
+  background-color: #dcdcdc;
+  border-top: 2px solid #000000 !important;
+  border-left: 2px solid #000000 !important;
+  border-right: 2px solid #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+  font-weight: bold;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Desktop Icon selection */
+.desktop-icon:hover {
+  background-color: rgba(0, 0, 128, 0.45);
+  outline: 1px dotted #ffffff;
+}
+
+.desktop-icon.selected {
+  background-color: rgba(0, 0, 128, 0.6);
+  outline: 1px dotted #ffff88;
+}
+
+/* Scrollbar retro 98 styling */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background-color: #dfdfdf;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c0c0c0;
+  border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  width: 16px;
+  height: 16px;
+}
