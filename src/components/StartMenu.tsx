@@ -132,20 +132,15 @@ export const StartMenu: React.FC<StartMenuProps> = ({
           <span>Minesweeper</span>
         </div>
 
-        <a
-          className="px-3 py-1.5 hover:bg-[#000080] hover:text-white flex items-center gap-2 cursor-pointer group text-black decoration-none"
-          href="/naman-portfolio-source.zip"
-          download="naman-portfolio-source.zip"
-          onClick={() => {
-            playClick();
-            onClose();
-          }}
+        <div
+          className="px-3 py-1.5 hover:bg-[#000080] hover:text-white flex items-center gap-2 cursor-pointer group text-black"
+          onClick={() => handleItemClick(() => onOpenApp('sourceViewer'))}
         >
           <span className="material-symbols-outlined text-base text-amber-700 group-hover:text-white">
             folder_zip
           </span>
-          <span>Download Source (.ZIP)</span>
-        </a>
+          <span>Export Source (.ZIP & Files)</span>
+        </div>
 
         <div className="border-t border-[#808080] border-b border-white my-1" />
 
