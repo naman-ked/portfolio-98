@@ -2,8 +2,6 @@
 
 An authentic retro Windows 98 desktop operating system and portfolio for **Naman Kedia**, Senior Member of Technical Staff (SMTS) — Frontend Infrastructure at ThoughtSpot (Ex-Dell Technologies).
 
-![Windows 98 Desktop Portfolio](https://lh3.googleusercontent.com/aida-public/AB6AXuDI7LOwbWJ3yiOsgCuLfeizH6CwYCQvpNYlb_RYYUmlgOba88uWkcJqkIjDdltNLKpcSW8huTa5yl66awUu6_j6_x8bDR1qPmCt_V6RlCNTFMqgj_sI1Oc4PxbvwLGeemWUH8kW4rOiKJDggCwNKRJ2QBi65S7oYskKox03KvAYtxQcqOELNHEv3Sd3MAKjLvgyIvZdL1p_DQPOUli9VIUTGbpYp310Li_sjj2cqyjwGRqYHqWOqsUhRIgF_Iz4H_LYBw)
-
 ---
 
 ## 🌟 Key Features
